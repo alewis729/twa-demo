@@ -40,3 +40,16 @@
 .read-the-docs {
   color: #888;
 }
+
+.Container > .TonButton {
+  margin: 0 auto;
+  margin-bottom: 35px;
+}
+
+.Card {
+  margin-bottom: 25px;
+}
+
+.Card > p {
+  margin-top: 0;
+}
