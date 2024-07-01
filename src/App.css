@@ -53,3 +53,7 @@
 .Card > p {
   margin-top: 0;
 }
+
+.Button.Disabled {
+  pointer-events: none;
+}

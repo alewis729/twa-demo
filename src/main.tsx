@@ -4,12 +4,14 @@ import { TonConnectUIProvider } from '@tonconnect/ui-react';
 import App from './App';
 import './index.css';
 
-// this manifest is used temporarily for development purposes
-const manifestUrl =
-  'https://raw.githubusercontent.com/ton-community/tutorials/main/03-client/test/public/tonconnect-manifest.json';
+let MANIFEST_URL = `${window.location.origin}/twa-demo/tonconnect-manifest.json`;
+
+if (window.location.hostname === 'localhost') {
+  MANIFEST_URL = `http://localhost:5173/twa-demo/tonconnect-local-manifest.json`;
+}
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <TonConnectUIProvider manifestUrl={manifestUrl}>
+  <TonConnectUIProvider manifestUrl={MANIFEST_URL}>
     <App />
   </TonConnectUIProvider>
 );

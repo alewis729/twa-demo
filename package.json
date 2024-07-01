@@ -1,11 +1,14 @@
 {
   "name": "twa-demo",
+  "homepage": "https://alewis729.github.io/twa-demo",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "format": "prettier \"**/*.{js,jsx,ts,tsx,json}\" --write"
@@ -16,6 +19,7 @@
     "@ton/crypto": "^3.2.0",
     "@ton/ton": "^13.11.2",
     "@tonconnect/ui-react": "^2.0.5",
+    "gh-pages": "^6.1.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "vite-plugin-node-polyfills": "^0.22.0"

@@ -23,11 +23,8 @@ export const useCounterContract = () => {
   useEffect(() => {
     async function getValue() {
       if (!counterContract) return;
-      console.log({ mstatus: 'Checking for value change...' });
       const val = await counterContract.getCounter();
-      if (Number(val) !== value) {
-        setValue(Number(val));
-      }
+      setValue(Number(val));
       await sleep(3000); // sleep 3 seconds and poll value again
       getValue();
     }

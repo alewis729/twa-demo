@@ -37,6 +37,7 @@ const App: React.FC = () => {
         </div>
         <button
           className={`Button ${connected ? 'Active' : 'Disabled'}`}
+          disabled={!connected}
           onClick={sendIncrement}
         >
           Increment
