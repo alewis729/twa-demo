@@ -1,5 +1,6 @@
 import React from 'react';
 import { TonConnectButton } from '@tonconnect/ui-react';
+import '@twa-dev/sdk';
 
 import { useCounterContract, useTonConnect } from './hooks';
 import { isNil } from './utils';
